@@ -1,0 +1,123 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Ultison Mobile</title>
+	<link rel="stylesheet" href="gson.min.css" />
+	<link rel="stylesheet" href="jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="./jquery.mobile-1.2.0.min.css" />
+	<script src="./jquery-1.8.2.min.js"></script>
+	<script src="./jquery.mobile-1.2.0.min.js"></script>
+</head> 
+
+	
+<body> 
+
+<div data-role="page" id="one" data-theme="a">
+
+	<div data-role="header">
+		<h1><span class="appname"></span></h1>
+	</div>
+
+	<div data-role="content" >	
+		<h2>Information</h2>
+		
+		 <p>This application is designed to make medical calculations easier and faster.</p>
+		 <p>Although this is a free version, you can request for more calculators/features to be added to it.</p>
+
+   <p>For enquires, requests or complaints, send an email to <a href="mailto:perfectcode1@gmail.com?cc=info@ultison.net&subject=MED-Mobile%20Related&body=%0A%0A%0A%0A%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%0ARegards.">perfectcode1@gmail.com</a></p>
+
+ 
+<p>Your feedback/suggestions will be highly appreciated.</p>
+
+
+		<p>Like ULTISON (https://www.facebook.com/ultison) on <a href="https://www.facebook.com/ultison" data-role="button" data-theme="c">Facebook</a></p>
+		
+		<h3>Applications:</h3>
+		<p><a href="#two" data-role="button" data-rel="page" data-transition="pop" data-theme="e">EGA/EDD Calculator</a></p>
+		<p><a href="#three" data-role="button" data-rel="dialog" data-transition="pop" data-theme="b">About</a></p>
+	</div>
+	
+	<div data-role="footer" data-theme="d">
+		<h4>ULTISON TECHNOLOGIES</h4>
+	</div>
+</div>
+
+<div data-role="page" id="two" data-theme="a">
+
+	<div data-role="header">
+		<h1><span class="appname"></span></h1>
+	</div>
+
+	<div data-role="content" data-theme="e">	
+		<h2>EGA/EDD Calculator</h2>
+		
+		<div data-role="fieldcontain">
+		<label for="LMP">Last Menstrual Period:</label>
+		<input type="date" name="LMP" id="LMP" />
+		</div>
+		
+		<div data-role="fieldcontain">
+		<label for="rule">Method:</label>
+		<select name="rule" id="rule" />
+		  <option value="1">40 Weeks (280 days)</option>
+		  <option value="2">Naegele's rule</option>
+		  <option value="3">Parikh's formula</option>
+		</select>
+		</div>
+		
+		<div data-role="fieldcontain" id="mlenDisp">
+		<label for="mlen">Last Menstrual Cycle Length:</label>
+		<select name="mlen" id="mlen" />
+		</select> Days
+		</div>
+		
+		<label for="CL">Check EGA on date:</label>
+		<div data-role="fieldcontain" data-theme="b">
+		<select name="CL" id="CL" data-role="slider">
+			<option value="0">Off</option>
+			<option value="1">ON</option>
+		</select>
+		<span id="cldate"><input type="date" name="tddate" id="tddate" /></span>
+		</div>
+		<div id="eddegadisp">
+		  <div data-role="fieldcontain">
+			<p>EDD: <span id="edddisp"></span></p>
+		  </div>
+		  <div data-role="fieldcontain">
+			<p>EGA: <span id="egadisp"></span></p>
+		  </div>
+		</div>
+		<p><input type="button" id="eddegacalcbutt" name="calculate" value="Calculate" data-role="button"/></p>
+		<p><a href="#one" data-direction="reverse" data-rel="back" data-role="button" data-inline="true" data-icon="back" data-iconpos="right" data-theme="b">Back to Home</a></p>		
+	</div>
+	
+	<div data-role="footer">
+		<h4>ULTISON TECHNOLOGIES</h4>
+	</div>
+</div>
+
+<div data-role="page" id="three" data-theme="a">
+
+	<div data-role="header">
+		<h1><span class="appname"></span></h1>
+	</div>
+
+	<div data-role="content" data-theme="e">	
+		<h2>Developer</h2>
+		<h4><span class="appname"></span> <span class="appver"></span></h4>
+		<p>More features will be rolled out from time to time.<br />For sponsorship/partnership/programming requests, call +2347032642745.<br />Enjoy!</p>
+		<p>I automate all tasks on earth to the click of a button. Try me.</p>
+		<p>Written by <strong>Godson Tudeme Jnr (4p05t14)(Gson)</strong>.</p>	
+		<p><a href="#one" data-direction="reverse" data-rel="back" data-role="button" data-inline="true" data-icon="back" data-theme="b">Back to Home</a></p>			
+	</div>
+	
+	<div data-role="footer">
+		<h4>ULTISON TECHNOLOGIES</h4>
+	</div>
+</div>
+
+</body>
+</html>
