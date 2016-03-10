@@ -36,7 +36,10 @@
 		<p>Like ULTISON (https://www.facebook.com/ultison) on <a href="https://www.facebook.com/ultison" data-role="button" data-theme="c">Facebook</a></p>
 		
 		<h3>Applications:</h3>
-		<p><a href="#two" data-role="button" data-rel="page" data-transition="pop" data-theme="e">EGA/EDD Calculator</a></p>
+		<p><a href="#six" data-role="button" data-rel="page" data-transition="pop" data-theme="e">BMI</a></p>
+		<p><a href="#two" data-role="button" data-rel="page" data-transition="pop" data-theme="e">EGA/EDD</a></p>
+		<p><a href="#four" data-role="button" data-rel="page" data-transition="pop" data-theme="e">Dopamine Drip DPM</a></p>
+		<p><a href="#five" data-role="button" data-rel="page" data-transition="pop" data-theme="e">IV Infusion Rate</a></p>
 		<p><a href="#three" data-role="button" data-rel="dialog" data-transition="pop" data-theme="b">About</a></p>
 	</div>
 	
@@ -119,5 +122,129 @@
 	</div>
 </div>
 
+
+
+<div data-role="page" id="four" data-theme="a">
+
+	<div data-role="header">
+		<h1><span class="appname"></span></h1>
+	</div>
+
+	<div data-role="content" data-theme="e">	
+		<h2>Dopamine Drip dpm Calculator</h2>
+		
+		<div data-role="fieldcontain">
+		<label for="ddcwt">Weight:</label>
+		<input type="range" name="ddcwt" id="ddcwt" min=20 max=120 step=1 value=60 />
+		</div>
+			
+		<div data-role="fieldcontain" id="mlenDisp">
+		<label for="ddcfvol">Fluid Vol:</label>
+		<input type="range" name="ddcfvol" id="ddcfvol" min=50 max=500 step=50 value=500 />
+		</div>
+
+
+		<div data-role="fieldcontain" id="mlenDisp">
+		<label for="ddcconc">Dopamine concentration:</label>
+		<input type="range" name="ddcconc" id="ddcconc" min=200 max=1000 step=200 value=200 /> <span>mg</span>
+		</div>
+		
+		<p><input type="button" id="ddcalc" name="calculate" value="Calculate" data-role="button"/></p>
+		
+		<div id="display">
+		  <div data-role="fieldcontain">
+			<p><b>Result:</b><br /> <span id="result">OK</span></p>
+		  </div>
+		</div>
+		<p><a href="#one" data-direction="reverse" data-rel="back" data-role="button" data-inline="true" data-icon="back" data-iconpos="right" data-theme="b">Back to Home</a></p>		
+	</div>
+	
+	<div data-role="footer">
+		<h4>ULTISON TECHNOLOGIES</h4>
+	</div>
+</div>
+
+
+<div data-role="page" id="five" data-theme="a">
+
+	<div data-role="header">
+		<h1><span class="appname"></span></h1>
+	</div>
+
+	<div data-role="content" data-theme="e">	
+		<h2>IV infusion Rate Calculator</h2>
+		
+		<div data-role="fieldcontain">
+		<label for="ivfld">Infusion Type:</label>
+		<select name="ivfld" id="ivfld" />
+		  <option value="20">Fluid</option>
+		  <option value="15">Blood</option>
+		</select>
+		</div>
+			
+		<div data-role="fieldcontain">
+		<label for="ivvol">Fluid Vol:</label>
+		<input type="range" name="ivvol" id="ivvol" min=50 max=1000 step=50 value=500 /> ml
+		</div>
+
+
+		<div data-role="fieldcontain">
+		<label for="ivdur">Infusion Duration:</label>
+		<p id="ivdur">
+		Hours:<select name="ivdurh" id="ivdurh"></select><br />
+		Minutes:<select name="ivdurm" id="ivdurm"></select>
+		</p>
+		</div>
+		
+		<p><input type="button" id="ivrcalc" name="calculate" value="Calculate" data-role="button"/></p>
+		
+		<div id="displayfive">
+		  <div data-role="fieldcontain">
+			<p><b>Result:</b><br /> <span id="resultfive">OK</span></p>
+		  </div>
+		</div>
+		<p><a href="#one" data-direction="reverse" data-rel="back" data-role="button" data-inline="true" data-icon="back" data-iconpos="right" data-theme="b">Back to Home</a></p>		
+	</div>
+	
+	<div data-role="footer">
+		<h4>ULTISON TECHNOLOGIES</h4>
+	</div>
+</div>
+
+
+<div data-role="page" id="six" data-theme="a">
+
+	<div data-role="header">
+		<h1><span class="appname"></span></h1>
+	</div>
+
+	<div data-role="content" data-theme="e">	
+		<h2>BMI Calculator</h2>
+			
+		<div data-role="fieldcontain">
+		<label for="bmiwt">Weight:</label>
+		<input type="range" name="bmiwt" id="bmiwt" min=10 max=150 step=1 value=60 /> kg
+		</div>
+
+		<div data-role="fieldcontain">
+		<label for="bmiht">Height:</label>
+		<input type="range" name="bmiht" id="bmiht" min=50 max=220 step=1 value=170 /> cm
+		</div>		
+		<p><input type="button" id="bmicalc" name="calculate" value="Calculate" data-role="button"/></p>
+		
+		<div id="displaysix">
+		  <div data-role="fieldcontain">
+			<p><b>Result:</b><br /> <span id="resultsix">OK</span></p>
+		  </div>
+		</div>
+		<p><a href="#one" data-direction="reverse" data-rel="back" data-role="button" data-inline="true" data-icon="back" data-iconpos="right" data-theme="b">Back to Home</a></p>		
+	</div>
+	
+	<div data-role="footer">
+		<h4>ULTISON TECHNOLOGIES</h4>
+	</div>
+</div>
+
+<script type="text/javascript" src="cordova.js"></script>
 </body>
 </html>
